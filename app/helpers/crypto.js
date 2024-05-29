@@ -11,6 +11,9 @@ export function decryptData(encryptedData, key = "123") {
   return bytes.toString(CryptoJS.enc.Utf8);
 }
 
+const myEncryptedData = encryptData("Hola, mundo");
+console.log(myEncryptedData);
+
 // Ejemplo de uso
 // const secretKey = 'supersecreto';
 // const originalData = 'Hola, mundo!';

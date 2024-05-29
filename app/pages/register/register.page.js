@@ -1,3 +1,6 @@
+import { navigateTo } from "../../Router";
+import { encryptData } from "../../helpers/crypto";
+
 export function RegisterPage(){
     const root = document.getElementById("root");
     root.innerHTML = `
@@ -22,7 +25,7 @@ export function RegisterPage(){
         }
 
         //fetch
-        const userCreated = await fetch('http://localhost:9000/users', {
+        const userCreated = await fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
@@ -30,9 +33,15 @@ export function RegisterPage(){
             body: JSON.stringify({
                 name: $userName.value,
                 email: $userEmail.value,
-                password: $userPaswword.value
+                password: encryptData($userPaswword.value)
             })
         })
-        console.log(userCreated);
+        
+        if (!userCreated.ok){
+            alert("Error al cargar el usuario")
+            return;
+        }
+        alert("Usuario Creado Satisfactoriamente")
+        navigateTo('/login')
     })
 }

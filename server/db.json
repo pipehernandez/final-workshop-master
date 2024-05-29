@@ -1,4 +1,11 @@
 {
-    "users": [],
-    "tasks": []
+  "users": [
+    {
+      "id": "2703",
+      "name": "andres",
+      "email": "andres@gmail.com",
+      "password": "U2FsdGVkX196mfE+z8Q2jQwQKyGdD215SooXzr0eiW0="
+    }
+  ],
+  "tasks": []
 }
