@@ -18,9 +18,9 @@ export function RegisterPage(){
         
         const $userName = document.querySelector('[type="text"]');
         const $userEmail = document.getElementsByTagName('input')[1];
-        const $userPaswword = document.querySelector('[type="password"]');
+        const $userPassword = document.querySelector('[type="password"]');
 
-        if(!$userName.value || !$userEmail.value || !$userPaswword.value){
+        if(!$userName.value || !$userEmail.value || !$userPassword.value){
             alert("Todos los campos son requeridos")
         }
 
@@ -33,7 +33,7 @@ export function RegisterPage(){
             body: JSON.stringify({
                 name: $userName.value,
                 email: $userEmail.value,
-                password: encryptData($userPaswword.value)
+                password: encryptData($userPassword.value)
             })
         })
         
