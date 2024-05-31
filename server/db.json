@@ -5,6 +5,12 @@
       "name": "Andres Hernandez",
       "email": "andres@gmail.com",
       "password": "U2FsdGVkX19vDPMB3npk78be4mb4kFPM9ovhOr/WOhw="
+    },
+    {
+      "id": "b3cf",
+      "name": "Felipe Hernandez",
+      "email": "felipe@gmail.com",
+      "password": "U2FsdGVkX18d0Bn0cMVxsRcbvaAE8u5U7HtuNTPwLZk="
     }
   ],
   "tasks": []

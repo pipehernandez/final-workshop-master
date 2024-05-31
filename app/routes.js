@@ -3,6 +3,7 @@ import { LoginPage } from "./pages/login/login.page";
 import { NotFoundPage } from "./pages/not-found";
 import { RegisterPage } from "./pages/register";
 import { TaskPage } from "./pages/tasks";
+import { UsersPage } from "./pages/users";
 
 export const routes = {
   public: [
@@ -12,6 +13,7 @@ export const routes = {
     { path: "/login", page: LoginPage },
   ],
   private: [
-    { path: "/tasks", page: TaskPage}
+    { path: "/tasks", page: TaskPage},
+    { path: "/users", page: UsersPage},
   ]
 };

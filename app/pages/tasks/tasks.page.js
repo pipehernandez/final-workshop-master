@@ -1,20 +1,26 @@
-import { navigateTo } from "../../Router";
-
 export function TaskPage(){
-    const root = document.getElementById('root');
-    root.innerHTML = `
-    <h1>Tasks</h1>
-    <ul>
-        <li>Task 1</li>
-        <li>Task 2</li>
-        <li>Task 3</li>
-    </ul>
-    <button id="logout">Cerrar Sesion</button>
-    `;
+    const $content = `<form>
+        <input type="text" placeholder="Titulo de tarea..." id="title"/>
+        <input type="text" placeholder="Descripcion..." id="description"/>
+        <select name="priority">
+            <option value="" disabled selected>--Selecciona algo--</option>
+            <option value="HIGH">Alta</option>
+            <option value="MEDIUM">Media</option>
+            <option value="LOW">Baja</option>
+        </select>
+        <input type="date" id="date"/>
+        <input type="submit"/>
+    </form>`;
+    const logic = () => {
+        const $form = document.getElementsByTagName('form')[0]
+        $form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+        })
+    }
 
-    const $logoutButton = document.getElementById('logout')
-    $logoutButton.addEventListener('click', () => {
-        localStorage.removeItem('token')
-        navigateTo('/login')
-    });
+    return {
+        $content,
+        logic
+    }
 }
